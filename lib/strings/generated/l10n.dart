@@ -49,6 +49,16 @@ class Strings {
   static Strings? maybeOf(BuildContext context) {
     return Localizations.of<Strings>(context, Strings);
   }
+
+  /// `Er ging iets mis`
+  String get somethingWentWrong {
+    return Intl.message(
+      'Er ging iets mis',
+      name: 'somethingWentWrong',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<Strings> {
