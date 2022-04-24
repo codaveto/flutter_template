@@ -18,13 +18,18 @@ abstract class AppSetup {
     log.success('Firebase app initialized!');
     _setupLocator(log: log);
     await _setupLoglytics(log: log);
+    _setupStrings(context, log);
+    log.success('App initialized!');
+  }
+
+  static void _setupStrings(BuildContext context, Log log) {
+    log.info('Setting up strings..');
     final currentLocale = Localizations.localeOf(context);
     log.value(currentLocale, 'User locale');
     final supportedLocale = currentLocale.toSupportedLocaleWithDefault;
     log.value(supportedLocale, 'Using locale');
     Strings.load(supportedLocale);
     log.success('Strings loaded!');
-    log.success('App initialized!');
   }
 
   static void _setupLocator({required Log log}) {
@@ -73,6 +78,8 @@ abstract class AppSetup {
       log.success('Loglytics reset!');
     }
     _setupLocator(log: log);
+    _setupLoglytics(log: log);
+    log.success('App reset!');
   }
 
   static void Function(Object error, StackTrace stackTrace) get onUncaughtException =>

@@ -19,7 +19,8 @@ abstract class BaseViewModel<T extends CustomAnalytics> with Loglytics<T> {
   ValueListenable<bool> get hasError => _hasError;
 
   String? _errorMessage;
-  String get errorMessage => _errorMessage ?? Strings.current.somethingWentWrong;
+  String get errorMessage =>
+      _errorMessage ?? Strings.current.somethingWentWrong;
 
   final Strings strings = Strings.current;
 

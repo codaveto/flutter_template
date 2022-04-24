@@ -13,5 +13,6 @@ extension SupportedLocaleExtension on SupportedLanguage {
 
 extension LocaleExtension on Locale {
   Locale get toSupportedLocaleWithDefault =>
-      SupportedLanguage.values.asNameMap()[languageCode]?.toLocale ?? _defaultLanguage.toLocale;
+      SupportedLanguage.values.asNameMap()[languageCode]?.toLocale ??
+      _defaultLanguage.toLocale;
 }
