@@ -6,7 +6,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_template/features/core/analytics/custom_analytics.dart';
 import 'package:loglytics/loglytics.dart';
 
-import '../../../../strings/generated/l10n.dart';
+import '../../../strings/generated/l10n.dart';
 
 abstract class BaseViewModel<T extends CustomAnalytics> with Loglytics<T> {
   final ValueNotifier<bool> _isInitialised = ValueNotifier(false);

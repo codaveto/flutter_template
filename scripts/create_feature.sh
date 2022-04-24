@@ -19,5 +19,6 @@ cd ../
 mkdir "forms"
 mkdir "services"
 mkdir "strings"
+mkdir "util"
 mkdir "views"
 mkdir "widgets"

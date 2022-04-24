@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-import '../../abstracts/state/base_view_model.dart';
+import '../abstracts/base_view_model.dart';
 
 class ViewModelBuilder<T extends BaseViewModel> extends StatefulWidget {
   const ViewModelBuilder({
