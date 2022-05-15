@@ -7,11 +7,11 @@ import 'package:get_it/get_it.dart';
 import '../abstracts/base_view_model.dart';
 
 class StartupViewModel extends BaseViewModel {
-  StartupViewModel();
 
   @override
   Future<void> initialise(DisposableBuildContext context) async {
     AppSetup.initialise(context: context.context!);
+
     super.initialise(context);
   }
 
@@ -21,4 +21,13 @@ class StartupViewModel extends BaseViewModel {
   }
 
   static StartupViewModel get locate => GetIt.instance.get();
+
+}
+
+class DummyService {
+  const DummyService({
+    required this.thisIsADummyService,
+  });
+
+  final String thisIsADummyService;
 }

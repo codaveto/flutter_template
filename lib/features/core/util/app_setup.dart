@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:firebase_core/firebase_core.dart';
+// import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_template/features/core/data/enums/supported_language.dart';
 import 'package:flutter_template/features/core/views/startup_view_model.dart';
@@ -14,7 +14,7 @@ abstract class AppSetup {
     final log = Log(location: 'AppSetup');
     WidgetsFlutterBinding.ensureInitialized();
     log.info('Initialising firebase app..');
-    await Firebase.initializeApp();
+    // await Firebase.initializeApp();
     log.success('Firebase app initialized!');
     _setupLocator(log: log);
     await _setupLoglytics(log: log);

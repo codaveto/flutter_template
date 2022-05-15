@@ -1,6 +1,6 @@
 // ignore_for_file: avoid_positional_boolean_parameters
 
-import 'package:firebase_auth/firebase_auth.dart';
+// import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_template/features/core/analytics/custom_analytics.dart';
@@ -19,15 +19,14 @@ abstract class BaseViewModel<T extends CustomAnalytics> with Loglytics<T> {
   ValueListenable<bool> get hasError => _hasError;
 
   String? _errorMessage;
-  String get errorMessage =>
-      _errorMessage ?? Strings.current.somethingWentWrong;
+  String get errorMessage => _errorMessage ?? Strings.current.somethingWentWrong;
 
   final Strings strings = Strings.current;
 
   late final DisposableBuildContext _disposableBuildContext;
   BuildContext get context => _disposableBuildContext.context!;
 
-  String? get userId => FirebaseAuth.instance.currentUser?.uid;
+  // String? get userId => FirebaseAuth.instance.currentUser?.uid;
 
   @mustCallSuper
   void initialise(DisposableBuildContext context) {
